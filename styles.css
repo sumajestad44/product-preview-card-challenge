@@ -10,50 +10,57 @@ body{
     background-color: hsl(30, 38%, 92%);
 }
 
-
+.mobile-image{
+    display: none;
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+}
 .main-container{
-    margin: 200px;
+    margin-top: 100px;
     height: 400px;
-    width: 600px;
+    width: 700px;
     border-radius: 40px;
     flex-wrap: wrap;
-    border-radius: 20px;
+    margin-bottom: 200px;
 }
 .main-container section{
     display: flex;
+    overflow: hidden;
     border-radius: 20px;
-    border: 2px solid blue;
+    
 }
 .main-container img{
     width: 50%;
 }
 
 .container-text{
-    padding: 20px;
+    padding: 30px;
     background-color: hsl(0, 0%, 100%);
-    height: auto;
     flex-wrap: wrap;
+    
+    
 }
 .container-text h1{
     color: hsl(212, 21%, 14%);
     font-family: 'Fraunces', serif;
     padding: 10px;
-}
-.container-text h2{
-    color: hsl(228, 12%, 48%);
-    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
 }
 .container-text h4{
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
    color:  hsl(228, 12%, 48%);
    padding: 10px;
+   
 }
 .container-text p{
     color: hsl(228, 12%, 48%);
     font-family: 'Montserrat', sans-serif;
+    padding: 10px;
 }
 
 
@@ -69,16 +76,72 @@ body{
 
 }
 .price-cart p{
+    padding-top: 25px;
     text-decoration:line-through;
 }
 .price-cart button{
     border: none;
-    padding: 10px 40px;
+    padding: 15px 70px;
     border-radius: 8px;
     background-color:  hsl(158, 36%, 37%);
     color: hsl(0, 0%, 100%);
     font-family: 'Montserrat', sans-serif;
 }
+.btn{
+   display: flex;
+}
+.btn h3{
+    padding-left: 10px;
+}
+.btn:hover{
+    background-color: hsl(158, 35%, 20%);
+    cursor: pointer;
+}
 .price-discount{
+    display: flex;
    flex-direction: row;
+   padding-bottom: 25px;
+}
+
+footer .attribution{
+    padding: 30px 0px 30px 0px;
+}
+footer{
+    border: 2px solid blue;
+}
+
+
+
+@media (max-width: 760px){
+    body{
+        height: auto;
+        min-width: 280px;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    .mobile-image{
+        display: flex;
+    }
+    .main-container .mobile-image{
+        width: 100%;
+    }
+    .desktop-image{
+        display: none;
+    }
+    .main-container section{
+        flex-direction: column;
+        border: 2px solid red;
+    }
+    .main-container{
+        margin: 30px;
+        width:auto;
+        height: 200px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .price-discount{
+        flex-wrap: wrap;
+    }
+
+    
 }
