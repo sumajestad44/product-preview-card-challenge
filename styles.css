@@ -6,8 +6,12 @@
     text-decoration: none;
 }
 body{
-    max-width: 1440px;
     background-color: hsl(30, 38%, 92%);
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    display: grid;
+    place-items: center;
 }
 
 .mobile-image{
@@ -15,7 +19,9 @@ body{
 }
 .flex-container{
     display: flex;
-    justify-content: center;
+    /* justify-content: center;   */
+    
+ 
 }
 .main-container{
     margin-top: 100px;
@@ -24,11 +30,14 @@ body{
     border-radius: 40px;
     flex-wrap: wrap;
     margin-bottom: 200px;
+    
+    
 }
-.main-container section{
+.main-container main{
     display: flex;
     overflow: hidden;
     border-radius: 20px;
+    
     
 }
 .main-container img{
@@ -119,7 +128,6 @@ footer{
 @media (max-width: 760px){
     body{
         height: auto;
-        min-width: 280px;
         flex-direction: column;
         overflow-x: hidden;
     }
@@ -132,7 +140,7 @@ footer{
     .desktop-image{
         display: none;
     }
-    .main-container section{
+    .main-container main{
         flex-direction: column;
 
     }
